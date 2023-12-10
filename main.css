@@ -31,3 +31,17 @@ main[view-mode="list"] article {
 main[view-mode="mosaic"] article {
   cursor: pointer;
 }
+
+main[view-mode="mosaic"] button {
+  display: none;
+}
+
+main[view-mode="list"] button {
+  display: block;
+}
+
+a {
+  cursor: default;
+  text-decoration: none;
+  color: black;
+}
