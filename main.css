@@ -1,0 +1,33 @@
+:root {
+  --min-width-article: 300px;
+  --article-height-in-list: 70vh;
+}
+
+main {
+  gap: 10px;
+}
+
+
+article {
+  padding: 10px;
+  border: 1px solid gray;
+}
+
+
+main[view-mode="mosaic"] {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--min-width-article), 1fr));
+}
+
+main[view-mode="list"] {
+  display: flex;
+  flex-direction: column;
+}
+
+main[view-mode="list"] article {
+  height: var(--article-height-in-list);
+}
+
+main[view-mode="mosaic"] article {
+  cursor: pointer;
+}
